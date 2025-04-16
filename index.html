@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To-do App Project meeting</title>
+    <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+    <header>
+        <h1>To-do App - First session</h1>
+        <nav>
+            <a href="#attendance">Attendance</a>
+        </nav>
+    </header>
+    <main>
+        <section id="meeting-info">
+            <h2>Topic: Brainstorming</h2>
+            <h3>Date: 4/15/2025</h3>
+        </section>
+
+        <section id="attendance">
+            <h2>Attendance</h2>
+            <ul>
+                <li><strong>Nathan</strong> - Leader</li>
+                <li>Anthony - Dev</li>
+                <li>Chaitya - Dev</li>
+                <li>Hanbin - PM</li>
+                <li>Jason - PM</li>
+                <li>Kevin - Designer</li>
+                <li>Long - Dev</li>
+                <li>Mahdi - Dev/PM</li>
+                <li>Min - Designer</li>
+                <li>Sruti - Dev/Designer</li>
+                <li>Yifei - Dev</li>
+            </ul>
+        </section>
+
+        <section id="agenda">
+            <h2>Agenda</h2>
+            <ol>
+                <li>Introduction and check-in</li>
+                <li>Design</li>
+                <li>Discussing which tools or framework to use</li>
+                <li>Ideas</li>
+            </ol>
+        </section>
+
+        <section id="new task">
+            <h2>Tasks for this week</h2>
+            <p>Explore express.js for backend</p>
+            <p>Try out React.js</p>
+        </section>
+
+        <section id="q and a">
+            <h2>Questions and concerns</h2>
+            <p>Long doesn't know how to code</p>
+        </section>
+
+        <section id="diagram">
+            <h2>Diagram</h2>
+            <p>Project diagram from meeting:</p>
+            <img src="./lab-2 diagram.png" width="300"/>
+        </section>
+
+        <section id="audio">
+            <h2>Audio Recording</h2>
+            <audio controls>
+                <source src="./Rick Roll (Different link  no ads).mp3">
+            </audio>
+        </section>
+
+        <section id="video">
+            <h2>Video Recording</h2>
+            <video controls width="320">
+              <source src="./Rick Roll (Different link  no ads).mp4" type="video/mp4" />
+              Your browser does not support the video element.
+            </video>
+          </section>
+
+          <section>
+            <h2>Extra Info</h2>
+            <details>
+              <summary>Show GitHub Repo</summary>
+              <p><a href="https://github.com/CSE110-SP25/Lab2_Starter">To-do app</a></p>
+            </details>
+          </section>
+
+          <section>
+            <h2>Feedback Form</h2>
+            <form>
+              <fieldset>
+                <legend>Team Feedback</legend>
+    
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" /><br /><br />
+    
+                <label for="day">Date:</label>
+                <input type="date" id="day" name="day" /><br /><br />
+    
+                <label>Was the meeting productive?</label><br />
+                <input type="radio" id="yes" name="productive" value="yes" />
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="productive" value="no" />
+                <label for="no">No</label><br /><br />
+    
+                <label>Topics covered:</label><br />
+                <input type="checkbox" id="ui" name="topics" value="UI" />
+                <label for="ui">UI Design</label>
+                <input type="checkbox" id="backend" name="topics" value="Backend" />
+                <label for="backend">Backend</label><br /><br />
+    
+                <label for="platform">Preferred platform:</label>
+                <select id="platform" name="platform">
+                  <option value="web">Web</option>
+                  <option value="mobile">Mobile</option>
+                </select><br /><br />
+    
+                <label for="feature">Suggest a feature:</label><br />
+                <textarea id="feature" name="feature" rows="4" cols="40"></textarea><br /><br />
+    
+                <label for="tech">Favorite tech:</label>
+                <input list="tech-options" id="tech" name="tech" />
+                <datalist id="tech-options">
+                  <option value="React" />
+                  <option value="Vue" />
+                  <option value="Firebase" />
+                </datalist><br /><br />
+    
+                <button type="submit">Submit</button>
+              </fieldset>
+            </form>
+          </section>
+        </main>
+    </main>
+    
+</body>
+</html>
