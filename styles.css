@@ -1,0 +1,385 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --accent-color: #e74c3c;
+    --header-font: 'Montserrat', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+body {
+    font-family: var(--body-font, Arial);
+    background-color: var(--background-color, white);
+    color: var(--text-color, black);
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2em 1em;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-family: var(--header-font, Helvetica);
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+}
+
+nav {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: underline;
+}
+
+nav a:active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+main {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+#meeting-info {
+    grid-column: 1 / -1; 
+    background-color: #f5f5f5;
+    padding: 1em;
+    border-left: 5px solid var(--primary-color);
+}
+
+section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    font-family: var(--header-font, Helvetica);
+}
+
+h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5em;
+    font-family: var(--header-font, Helvetica);
+}
+
+ul, ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+ul > li {
+    margin-bottom: 0.5em;
+    list-style-type: square;
+}
+
+li + li {
+    border-top: 1px solid #eee;
+    padding-top: 0.5em;
+}
+
+[id^="attendance"] li {
+    color: #555;
+}
+
+li.important {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+h2 ~ p {
+    line-height: 1.8;
+}
+
+section:has(h2) {
+    padding-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    main {
+        & section {
+            transition: transform 0.3s;
+            
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+    }
+}
+
+audio, video {
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border: 3px solid #ddd;
+    border-radius: 4px;
+}
+
+details {
+    margin: 1rem 0;
+}
+
+summary {
+    cursor: pointer;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+fieldset {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+legend {
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+}
+
+.footer-note, footer p {
+    font-size: 0.9rem;
+}
+
+#useless-div {
+    display: none;
+    background-color: #ffcc00;
+    padding: 10px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    main {
+        grid-template-columns: 1fr;
+    }
+    
+    nav {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    #meeting-info, 
+    #attendance, 
+    #agenda {
+        grid-column: span 2;
+    }
+}
+
+#attendance {
+    background-color: rgba(46, 204, 113, 0.1);
+}
+
+#agenda {
+    background-color: hsla(195, 53%, 79%, 0.5);
+}
+
+#new-task {
+    background-color: #e8f7f0;
+}
+
+#q-and-a {
+    background-color: lavender;
+}
+
+#diagram {
+    background-color: color-mix(in srgb, var(--primary-color) 20%, white);
+}
+
+#audio {
+    margin: 10px;
+    padding: 15pt;
+    border-width: 2px;
+}
+
+#video {
+    margin: 1.5rem;
+    padding: 2em;
+    width: 90%;
+}
+
+#attendance {
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: #eee;
+    border-right-color: #eee;
+    border-bottom-color: #eee;
+    border-left-color: var(--primary-color);
+}
+
+#agenda {
+    border: 2px dashed var(--secondary-color);
+    border-radius: 8px;
+}
+
+#new-task {
+    margin-top: 1rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+}
+
+#q-and-a {
+    margin: 2rem 1rem;
+}
+
+#diagram {
+    margin: auto;
+}
+
+#attendance {
+    padding-top: 1.5rem;
+    padding-right: 1rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
+}
+
+#agenda {
+    padding: 1.5rem 1rem 2rem 1rem;
+}
+
+p {
+    text-align: justify;
+    color: #444;
+    text-decoration: none;
+}
+
+strong {
+    color: var(--accent-color);
+}
+
+.footer-note {
+    display: block;
+    margin-top: 10px;
+}
+
+#useless-div span {
+    display: inline-block;
+    padding: 5px;
+    background-color: yellow;
+}
+
+.footer-note {
+    position: relative;
+    bottom: 0;
+}
+
+audio {
+    height: 40px;
+    max-width: 100%;
+    min-width: 200px;
+}
